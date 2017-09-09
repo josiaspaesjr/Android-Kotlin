@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android-Kotlin-Layouts-Views09</string>
+    <string name="dialog_01">Dialog 01</string>
+    <string name="dialog_02">Dialog 02</string>
+    <string name="dialog_03">Dialog 03</string>
+    <string name="dialog_04">Dialog 04</string>
+    <string name="dialogs">Dialogs</string>
+    <string name="dialogs_example">Dialog example</string>
+</resources>

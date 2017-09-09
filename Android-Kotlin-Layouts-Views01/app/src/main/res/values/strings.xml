@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Android-Kotlin-Layouts-Views01</string>
+    <string name="str01">I changed this text</string>
+    <string name="str02">Change Text</string>
+    <string name="str03">Clear Text</string>
+    <string name="str04">Tip anything ...</string>
+</resources>

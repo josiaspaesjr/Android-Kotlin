@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android-Kotlin-Retrofit</string>
+    <string name="error">Connection Error</string>
+</resources>
