@@ -1,5 +1,6 @@
 package com.paes.josias.android_kotlin_layouts_views09
 
+import android.app.ProgressDialog
 import android.content.DialogInterface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -40,6 +41,21 @@ class MainActivity : AppCompatActivity() {
         dialog.setNegativeButton("Cancel", DialogInterface.OnClickListener { dialog, which ->
             Toast.makeText(applicationContext, "You clicked on NEGATIVE Button", Toast.LENGTH_SHORT).show()
         })
+        dialog.show();
+    }
+
+    fun dialog04(v:View){
+        var dialog:AlertDialog.Builder = AlertDialog.Builder(this@MainActivity)
+        dialog.setTitle(R.string.dialogs)
+        dialog.setMessage(R.string.dialogs_example)
+        dialog.setCancelable(false)
+        dialog.show();
+    }
+
+    fun dialog05(v:View){
+        var dialog:ProgressDialog = ProgressDialog(this@MainActivity)
+        dialog.setTitle(R.string.dialogs)
+        dialog.setMessage(getString(R.string.dialogs_example))
         dialog.show();
     }
 }

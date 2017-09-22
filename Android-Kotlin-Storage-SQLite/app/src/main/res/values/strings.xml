@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android-Kotlin-Storage-SQLite</string>
+    <string name="str01">Insert data</string>
+    <string name="str02">Search data</string>
+    <string name="str03">Update data</string>
+    <string name="str04">Delete data</string>
+    <string name="btnsave">SAVE</string>
+    <string name="btnfindall">FIND ALL</string>
+</resources>

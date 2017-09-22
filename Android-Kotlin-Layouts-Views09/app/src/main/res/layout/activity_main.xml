@@ -31,4 +31,18 @@
         android:text="@string/dialog_03"
         android:onClick="dialog03"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_cancel"
+        android:onClick="dialog04"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/progress_dialog"
+        android:onClick="dialog05"
+        />
+
 </LinearLayout>

@@ -4,6 +4,8 @@
     <string name="dialog_02">Dialog 02</string>
     <string name="dialog_03">Dialog 03</string>
     <string name="dialog_04">Dialog 04</string>
+    <string name="dialog_cancel">Dialog cancelable</string>
+    <string name="progress_dialog">Progress Dialog</string>
     <string name="dialogs">Dialogs</string>
     <string name="dialogs_example">Dialog example</string>
 </resources>
