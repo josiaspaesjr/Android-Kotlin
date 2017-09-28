@@ -10,22 +10,29 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create a new student here!!!"
+        android:text="Update a new student here!!!"
         android:textSize="20sp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:gravity="center"/>
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/etUpdId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tip student name ..."/>
+        android:hint="Tip stundent's id ..."
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/etUpdName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tip new student name ..."/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnsave"
-        android:onClick="saveStudent"/>
+        android:text="@string/btnupd"
+        android:onClick="updateStudent"/>
 
 </LinearLayout>

@@ -4,7 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
-import com.paes.josias.android_kotlin_storage_sqlite.models.Aluno
+import com.paes.josias.android_kotlin_storage_sqlite.models.Student
 import com.paes.josias.android_kotlin_storage_sqlite.persistence.DBConfig
 
 /**
@@ -18,32 +18,66 @@ class AlunoDAO (var context:Context) {
     var sliteWrite:SQLiteDatabase = config.writableDatabase;
     var sliteRead:SQLiteDatabase = config.readableDatabase;
 
-    fun insertData(aluno:Aluno): Boolean{
+    fun insertData(student: Student): Boolean{
         var cv:ContentValues = ContentValues()
-        cv.put(DBConfig.COL_ALUNOS_NOME, aluno.nome)
+        cv.put(DBConfig.COL_ALUNOS_NOME, student.nome)
 
         var result = sliteWrite.insert(DBConfig.TABELA_NOME, null, cv)
 
         return result > 0
     }
 
-    fun readAll(): ArrayList<Aluno>{
+    fun readAll(): ArrayList<Student>{
 
-        var alunos:ArrayList<Aluno> = ArrayList<Aluno>()
+        var students:ArrayList<Student> = ArrayList<Student>()
 
         var c: Cursor = sliteRead.rawQuery("SELECT * FROM "
                 + DBConfig.TABELA_NOME, null)
 
         while (c.moveToNext()){
-            var aluno:Aluno = Aluno(
+            var student: Student = Student(
                     c.getInt(0),
                     c.getString(1)
             )
 
-            alunos.add(aluno)
+            students.add(student)
         }
 
-        return alunos
+        return students
+    }
+
+    fun searchByName(name:String): ArrayList<Student>{
+
+        var students:ArrayList<Student> = ArrayList<Student>()
+
+        var c: Cursor =
+            sliteRead.rawQuery( " SELECT * FROM " + DBConfig.TABELA_NOME +
+                                " WHERE " + DBConfig.COL_ALUNOS_NOME + " LIKE '%" + name + "%'"
+                                , null)
+
+        while (c.moveToNext()){
+            var student: Student = Student(
+                    c.getInt(0),
+                    c.getString(1)
+            )
+
+            students.add(student)
+        }
+
+        return students
+    }
+
+    fun updateStudent(id:Int, newName:String){
+        sliteWrite.execSQL( " UPDATE " + DBConfig.TABELA_NOME +
+                " SET " + DBConfig.COL_ALUNOS_NOME + " = '" + newName + "' " +
+                " WHERE " + DBConfig.COL_ALUNOS_ID + " = " + id
+        )
+    }
+
+    fun deleteStudent(id:Int){
+        sliteWrite.execSQL( " DELETE FROM " + DBConfig.TABELA_NOME +
+                " WHERE " + DBConfig.COL_ALUNOS_ID + " = " + id
+        )
     }
 
     fun closeConn(){

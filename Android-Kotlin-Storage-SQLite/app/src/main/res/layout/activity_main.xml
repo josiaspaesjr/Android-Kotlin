@@ -17,16 +17,19 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/str02" />
+        android:text="@string/str02"
+        android:onClick="openSearchScreen"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/str03" />
+        android:text="@string/str03"
+        android:onClick="openUpdateScreen"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/str04" />
+        android:text="@string/str04"
+        android:onClick="openDeleteScreen"/>
 
 </LinearLayout>

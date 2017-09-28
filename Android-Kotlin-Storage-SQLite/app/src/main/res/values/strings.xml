@@ -5,5 +5,10 @@
     <string name="str03">Update data</string>
     <string name="str04">Delete data</string>
     <string name="btnsave">SAVE</string>
-    <string name="btnfindall">FIND ALL</string>
+    <string name="btnupd">update</string>
+    <string name="btndel">delete</string>
+    <string name="btnsearchall">SEARCH ALL</string>
+    <string name="btnsearchname">SEARCH BY NAME</string>
+    <string name="tip_a_name">Tip a name ...</string>
+    <string name="search_a_student_by_name">Search a student by name</string>
 </resources>

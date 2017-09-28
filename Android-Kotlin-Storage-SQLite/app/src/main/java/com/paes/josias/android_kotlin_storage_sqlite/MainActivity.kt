@@ -16,4 +16,16 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this@MainActivity, InsertSQLiteActivity::class.java))
     }
 
+    fun openSearchScreen(v: View){
+        startActivity(Intent(this@MainActivity, SearchSQLiteActivity::class.java))
+    }
+
+    fun openUpdateScreen(v: View){
+        startActivity(Intent(this@MainActivity, UpdateSQLiteActivity::class.java))
+    }
+
+    fun openDeleteScreen(v: View){
+        startActivity(Intent(this@MainActivity, DeleteSQLiteActivity::class.java))
+    }
+
 }
