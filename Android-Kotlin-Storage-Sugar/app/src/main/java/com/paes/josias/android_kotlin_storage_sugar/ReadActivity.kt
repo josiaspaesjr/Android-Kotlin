@@ -16,7 +16,7 @@ class ReadActivity : AppCompatActivity() {
         val records:StringBuffer = StringBuffer()
 
         for(book in books){
-            records.append("${book.title} - ${book.author}\n-------------\n")
+            records.append("${book.id}: ${book.title} - ${book.author}\n-------------\n")
         }
 
         tvRecords.text = records

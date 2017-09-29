@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CREATE EXAMPLE"
+        android:text="CREATE A NEW BOOK"
         android:textSize="25sp"
         android:gravity="center"/>
 
@@ -19,20 +19,20 @@
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Title to update ..."
+        android:hint="Title ..."
         />
 
     <EditText
         android:id="@+id/etAuthor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="New title ..."
+        android:hint="Author ..."
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update"
+        android:text="SAVE"
         android:onClick="saveBook"
         />
 
