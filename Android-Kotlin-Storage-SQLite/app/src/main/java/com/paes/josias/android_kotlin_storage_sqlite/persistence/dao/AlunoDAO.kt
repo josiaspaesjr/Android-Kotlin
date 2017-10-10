@@ -27,6 +27,15 @@ class AlunoDAO (var context:Context) {
         return result > 0
     }
 
+    fun insertData2(student: Student){
+        var cv:ContentValues = ContentValues()
+        cv.put(DBConfig.COL_ALUNOS_NOME, student.nome)
+
+        var result = sliteWrite.execSQL(" INSERT INTO " + DBConfig.TABELA_NOME +
+                                        " (" + DBConfig.COL_ALUNOS_NOME + ") " +
+                                        " VALUES ('" + student.nome + "') ")
+    }
+
     fun readAll(): ArrayList<Student>{
 
         var students:ArrayList<Student> = ArrayList<Student>()
@@ -86,3 +95,5 @@ class AlunoDAO (var context:Context) {
         config.close();
     }
 }
+
+
