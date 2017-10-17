@@ -42,14 +42,9 @@ class ConnectionService() {
 
                         callback.onSuccess(str)
 
-                    } ?: run {
-                        //mainPresenter.result(context.getString(R.string.error))
                     }
-                } ?: run {
-                    //mainPresenter.result(context.getString(R.string.error))
                 }
             }
-
             override fun onFailure(call: Call<Post>, t: Throwable) {
                 //.result(context.getString(R.string.error))
             }
@@ -80,11 +75,7 @@ class ConnectionService() {
 
                         callback.onSuccess(str)
 
-                    } ?: run {
-                        callback.onFailure(context.getString(R.string.error))
                     }
-                } ?: run {
-                    callback.onFailure(context.getString(R.string.error))
                 }
             }
 

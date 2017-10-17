@@ -41,8 +41,9 @@ class MainActivity : AppCompatActivity() {
         }else{
             Toast.makeText(this@MainActivity, "EditText is Empty", Toast.LENGTH_SHORT).show()
         }
-
     }
+
+
     fun sendRequestPost(v:View){
         showProgressDialog()
         val post = Post(1,0, "My Post", "My Post Body")
